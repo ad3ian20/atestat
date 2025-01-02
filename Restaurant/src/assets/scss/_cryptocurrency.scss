@@ -1,0 +1,61 @@
+.crpto-banner {
+    background-image: url(../images/banner-crp-mob.jpg);
+    background-size: cover;
+
+    .ml-auto {
+        background: rgb(106 17 203 / 46%);
+    }
+}
+
+.crpto-cardbx {
+    .card {
+        text-align: center;
+
+        span {
+            display: block;
+        }
+
+        label {
+            font-size: $font-size-14;
+        }
+
+        img {
+            border-radius: 50%;
+        }
+
+        ul {
+            padding-left: 0;
+            justify-content: center;
+            list-style: none;
+            display: flex;
+
+            li {
+                font-size: $font-size-20;
+                padding: 10px;
+
+                &:hover {
+                    .mdi {
+                        background-image: linear-gradient(to top, rgb(106, 17, 203), rgb(18, 79, 194)) !important;
+                        color: transparent;
+                        -webkit-background-clip: text;
+                        -moz-background-clip: text;
+                        background-clip: text;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:425px){
+  .crpto-cardbx{
+    .card{
+
+      img{
+        width: 50%;
+        margin: 0 auto;
+      }
+    }
+  }
+}

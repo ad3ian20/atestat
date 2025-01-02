@@ -1,0 +1,17 @@
+.cta9-bg {
+    background-image: url(../images/cta-9.jpg);
+    min-height: 460px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media (max-width: 820px ) and (min-width:520px) {
+    .cta9-bg {
+        background-image: url(../images/cta-9.jpg);
+        min-height: 550px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

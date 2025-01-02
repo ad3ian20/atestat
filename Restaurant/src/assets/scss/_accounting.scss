@@ -1,0 +1,32 @@
+.testimonial4-1 {
+    .owl-dots {
+        counter-reset: dots;
+        text-align: left !important;
+
+        .owl-dot {
+            padding: 15px 20px 10px 0!important;
+            cursor: pointer;
+
+            span {
+                display: none !important;
+            }
+
+            &:before {
+                counter-increment: dots;
+                content: counter(dots);
+            }
+
+            &.active {
+                &:before {
+                    font-weight: 500;
+                    color: #6a11cb;
+                    border-bottom: 2px solid #6a11cb;
+                }
+            }
+        }
+    }
+
+    .text-right{
+        text-align:right;
+    }
+}
