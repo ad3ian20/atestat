@@ -1,0 +1,460 @@
+
+/*******************
+Pricing 1
+*******************/
+.pricing1 {
+    .card {
+        transition: 0.1s;
+
+        &:hover {
+            transform: scale(1.05);
+            -webkit-transform: scale(1.05);
+            -webkit-font-smoothing: antialiased;
+        }
+    }
+
+    .badge {
+        top: -13px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100px;
+        margin: 0 auto;
+    }
+
+    .title {
+        margin-top: 20px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+
+    .pricing {
+        margin: 20px 0;
+
+        sup {
+            font-size: 18px;
+            top: -20px;
+        }
+
+        .display-5 {
+            color: #263238;
+        }
+
+        .yearly {
+            display: none;
+        }
+
+        .db {
+            display: block;
+        }
+    }
+
+    .list-inline {
+        margin-top: 30px;
+
+        li {
+            padding: 8px 0;
+            display: block;
+        }
+    }
+
+    .bottom-btn {
+        position: relative;
+        bottom: 0px;
+    }
+}
+
+.l-s{
+    li{
+        list-style:none;
+    }
+}
+
+.onoffswitch {
+    position: relative;
+    width: 70px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    margin: 0 auto;
+
+    .onoffswitch-checkbox {
+        display: none;
+    }
+
+    .onoffswitch-label {
+        display: block;
+        overflow: hidden;
+        cursor: pointer;
+        border: 2px solid transparent;
+        border-radius: 20px;
+
+        .onoffswitch-inner {
+            display: block;
+            width: 200%;
+            margin-left: -100%;
+            transition: margin 0.3s ease-in 0s;
+
+            &:before {
+                display: block;
+                float: left;
+                width: 50%;
+                height: 30px;
+                padding: 0;
+                line-height: 30px;
+                font-size: 14px;
+                color: $white;
+                box-sizing: border-box;
+                content: "";
+                padding-right: 27px;
+                background-color: #6a11cb;
+                color: $white;
+            }
+
+            &:after {
+                display: block;
+                float: left;
+                width: 50%;
+                height: 30px;
+                padding: 0;
+                line-height: 30px;
+                font-size: 14px;
+                color: $white;
+                box-sizing: border-box;
+                content: "";
+                padding-right: 24px;
+                background-color: $greyish-brown;
+                color: $greyish-warm;
+                text-align: right;
+            }
+        }
+
+        .onoffswitch-switch {
+            display: block;
+            width: 23px;
+            margin: 6px;
+            background: $white;
+            height: 23px;
+            position: absolute;
+            top: -1px;
+            bottom: 0;
+            right: 35px;
+            border-radius: 20px;
+            transition: all 0.3s ease-in 0s;
+        }
+    }
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
+
+/*******************
+Pricing 2
+*******************/
+.pricing2 {
+    background-size: cover;
+    max-height: 530px;
+    margin-bottom: 220px;
+
+    .pricing-box {
+        margin-top: 150px;
+    }
+
+    .above-card {
+        margin: -70px -32px -32px;
+
+        .card {
+            padding: 30px;
+        }
+    }
+
+    .pricing-text {
+        sup {
+            top: -50px;
+            font-size: 24px;
+        }
+
+        span {
+            font-size: 100px;
+            font-weight: 400;
+            line-height: 100px;
+            color: #263238;
+        }
+    }
+
+    .list-inline {
+        margin: 0 0 30px 0;
+
+        li {
+            padding: 7px 0;
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .pricing2 {
+        max-height: 100%;
+        margin-bottom: 0px;
+
+        .pricing-box {
+            margin-top: 20px;
+        }
+
+        .display-5 {
+            font-size: 36px;
+        }
+
+        .above-card {
+            margin: 0;
+
+            .card {
+                padding: 0px;
+            }
+        }
+    }
+}
+
+/*******************
+Pricing 3
+*******************/
+.pricing3 {
+    .col-lg-2 {
+        padding-right: 0px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .col-lg-10 {
+        padding-left: 0px;
+    }
+
+    .nav-pills {
+        border: 1px solid rgba(120, 130, 140, 0.13);
+        border-radius: 4px;
+        border-right: 0px;
+
+        .nav-link {
+            padding: 30px 25px;
+
+            h2 {
+                color: $greyish-warm;
+            }
+
+            h6 {
+                // color: #6a11cb;
+            }
+
+            &.active {
+                background: #ffffff;
+                border-left: 3px solid #6a11cb;
+                border-radius: 0px;
+                margin-left: -3px;
+                box-shadow: -20px 0 40px rgba(0, 0, 0, 0.1);
+
+                h2 {
+                    color: $greyish-brown;
+                }
+
+                h6 {
+                    color: #6a11cb;
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        background: #ffffff;
+        overflow: hidden;
+        box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
+
+        .pricing-box {
+            padding: 50px 80px;
+        }
+
+        .list-inline {
+            margin-top: 20px;
+
+            li {
+                padding: 30px 0;
+                font-weight: 400;
+
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                i {
+                    font-size: 40px;
+                    text-align: center;
+                    vertical-align: middle;
+                    width: 80px;
+                    overflow: hidden;
+                    display: inline-block;
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        .p-text {
+            span {
+                vertical-align: middle;
+            }
+        }
+
+        .bg-image {
+            background-size: cover;
+            position: relative;
+            display: flex;
+            height: auto;
+
+            .quote-box {
+                padding: 40px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .pricing3 {
+        .col-lg-2 {
+            padding-right: 15px;
+        }
+
+        .col-lg-10 {
+            padding-left: 15px;
+        }
+
+        .nav-pills {
+            flex-direction: row !important;
+            border-bottom: 0px;
+            border-right: 1px solid rgba(120, 130, 140, 0.13);
+
+            .nav-link {
+                padding: 25px 18px;
+
+                &.active {
+                    border-left: 0px;
+                    border-top: 3px solid #ff4d7e;
+                    margin-top: -4px;
+                    margin-left: 0px;
+                    margin-bottom: -1px;
+                    box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.1);
+                }
+            }
+        }
+
+        .tab-content {
+            .pricing-box {
+                padding: 20px;
+            }
+        }
+    }
+}
+
+
+/*******************
+Pricing 5
+*******************/
+.pricing5 {
+    .general-listing {
+        margin: 90px 0 60px 0;
+    }
+
+    .only-li {
+        li {
+            padding: 20px 0;
+            display: block;
+        }
+    }
+
+    .card {
+        background-size: 100% !important;
+    }
+
+    .yearly {
+        display: none;
+    }
+
+    .pricing-box {
+        margin-top: 120px;
+
+        .middle-box {
+            margin-top: -75px;
+
+            .general-listing {
+                margin-top: 60px;
+            }
+        }
+    }
+}
+
+.btn-secondary {
+    color: #fff;
+    background: $greyish-warm;
+    border-color: $greyish-warm;
+
+    &:hover {
+        color: $white;
+        background: linear-gradient(to right, #1051c2 0%, #6a11cb 70%);
+    }
+}
+
+@media (max-width: 767px) {
+    .pricing5 {
+        .pricing-box {
+            margin-top: 40px;
+
+            .middle-box {
+                margin-top: 0px;
+            }
+        }
+    }
+}
+
+/*******************
+Pricing 6
+*******************/
+.pricing6 {
+    .price-box {
+        margin: 20px 0;
+
+        sup {
+            top: -20px;
+            font-size: 16px;
+        }
+
+        .display-5 {
+            line-height: 58px;
+        }
+    }
+
+    .general-listing {
+        padding-left: 30px;
+
+        .only-li {
+
+            li {
+                padding: 10px 0;
+            }
+        }
+    }
+
+    .badge-danger {
+        background-color: $red;
+    }
+}
+
+@media (max-width: 767px){
+    .pricing6 {
+        .general-listing {
+            padding-left: 10px;
+        }
+    }
+}
