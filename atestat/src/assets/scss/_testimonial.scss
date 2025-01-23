@@ -1,0 +1,23 @@
+.Testimonials10 {
+  .owl-nav {
+    display: none;
+  }
+}
+
+
+@media (max-width: 820px) and (min-width: 576px){
+    .tem-img-wid {
+        max-width: 100%!important;
+        height: 70%!important;
+        align-self: center;
+    }
+}
+
+.testimonial9 {
+  .owl-dots {
+    position: absolute;
+    left: -104%;
+    // top: 170px;
+    margin-top: 10px;
+  }
+}

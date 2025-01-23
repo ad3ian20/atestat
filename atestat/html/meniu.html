@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoSerti</title>
+    <link rel="icon" type="image/x-icon" href="../src/assets/images/logo.ico">
+    <link rel="stylesheet" href="../src/assets/css/aos.css">
+    <link rel="stylesheet" href="../src/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../src/assets/css/slick-theme.css">
+    <link rel="stylesheet" href="../src/assets/css/slick.css">
+    <link rel="stylesheet" href="../src/assets/css/styles.css">
+    <style>
+        /* Stilizare pentru pop-up */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .popup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .popup-header h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .popup-close {
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+        }
+
+        .popup img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .popup-content {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .popup-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #e63946;
+            margin-bottom: 15px;
+        }
+
+        .popup-price span {
+            text-decoration: line-through;
+            font-size: 0.9rem;
+            color: gray;
+            margin-left: 10px;
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .quantity-control button {
+            background: none;
+            border: 2px solid #e63946;
+            color: #e63946;
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .quantity-control button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .quantity-value {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        .popup-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background: #e63946;
+            color: white;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .popup-button:hover {
+            background: #d62828;
+        }
+
+        .card img {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header16 position-relative">
+        <!-- Topbar  -->
+        <div class="h16-topbar">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand d-lg-none" href="#">Top Menu</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header16a"
+                        aria-controls="header16a" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="mdi mdi-dots-vertical"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="header16a">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="mdi mdi-email-outline fs-3 align-middle"></i> info@doserti.com </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="mdi mdi-facebook fs-3"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="mdi mdi-twitter fs-3"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="mdi mdi-linkedin fs-3"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="mdi mdi-pinterest fs-3"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="mdi mdi-instagram fs-3"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Infobar  -->
+        <div class="h16-infobar">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg h16-info-bar">
+                    <a class="navbar-brand">
+                        <img src="../src/assets/images/logo_landscape.png" width="200" alt="logo234" /> 
+                       
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#h16-info"
+                        aria-controls="h16-info" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="mdi mdi-dots-vertical"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="h16-info">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link">
+                                    <div class="display-6 m-r-10 text-dblue-sub f-w">
+                                        <i class="mdi mdi-clock-check-outline"></i>
+                                    </div>
+                                    <div>
+                                        <small class="text-dblue-sub f-w">Luni - Sambata  <span class="">8:00 - 22:00</span>
+                                            <br />Duminica - Inchis </small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">
+                                    <div class="display-6 m-r-10 text-dblue-sub f-w">
+                                        <i class="mdi mdi-phone text-dblue-sub f-w"></i>
+                                    </div>
+                                    <div>
+                                        <small class=" text-dblue-sub f-w">Rezervari</small>
+                                        <h5 class="font-bold">+40 720 345 790</h5>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar  -->
+<div class="h16-navbar mb-0">
+    <nav class="navbar navbar-expand-lg h16-nav bg-grad-slid">
+        <div class="container p-0">
+            <a class="d-lg-none text-white">Navigation</a>
+            <button class="navbar-toggler text-white" type="button" data-toggle="collapse"
+                data-target="#header16" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="mdi mdi-menu-open"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="header16">
+                <div class="hover-dropdown w-100 d-flex justify-content-between">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../html/index.html">Acasă</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/meniu.html">Meniu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/despre-noi.html">Despre noi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/contact-us.html">Contact</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/galerie.html">Coșul meu</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+    </header> 
+
+    <!-- Header end -->
+
+    <!-- Body start -->
+<section class="charity-events bg-sec tt m-0 pt-5 pb-5">
+    <div class="container">
+        <!-- Secțiunea Aperitive -->
+        <div class="row justify-content-center text-center">
+            <div class="col-md-8 col-lg-6">
+                <h2 class="text-dblue">Aperitive</h2>
+            </div>
+        </div>
+        <div class="row">
+<!-- Card 1.1: Bruschetta -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/bruschetta.jpg" width="200" class="" alt="Bruschetta" 
+                onclick="showPopup('Bruschetta', 'Baghetă prăjită cu roșii proaspete, busuioc, usturoi și glazură balsamică.', '../src/assets/images/bruschetta.jpg', 25.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Bruschetta
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 1.2: Ciuperci umplute -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/ciuperci_umplute.jpg" width="200" class="" alt="Ciuperci umplute" 
+                onclick="showPopup('Ciuperci umplute', 'Ciuperci umplute cu usturoi, brânză cremă și ierburi.', '../src/assets/images/ciuperci_umplute.jpg', 28.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Ciuperci umplute
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 1.3: Tartare de ton picant -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/tartare_ton.jpg" width="200" class="" alt="Tartare de ton picant" 
+                onclick="showPopup('Tartare de ton picant', 'Ton proaspăt cu avocado, castraveți și dressing picant de sriracha.', '../src/assets/images/tartare_ton.jpg', 35.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Tartare de ton picant
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 1.4: Calamari crocanți -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/calamari.jpg" width="200" class="" alt="Calamari crocanți" 
+                onclick="showPopup('Calamari crocanți', 'Calamari ușor făcuți în aluat, serviți cu lămâie și sos marinara.', '../src/assets/images/calamari.jpg', 30.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Calamari crocanți
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 1.5: Salată Caprese -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/salata_caprese.jpg" width="200" class="" alt="Salată Caprese" 
+                onclick="showPopup('Salată Caprese', 'Mozzarella proaspătă, roșii, busuioc și ulei de măsline, stropită cu reducție balsamică.', '../src/assets/images/salata_caprese.jpg', 28.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Salată Caprese
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 1.6: Aripioare de pui -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/aripioare.jpg" width="200" class="" alt="Aripioare de pui" 
+                onclick="showPopup('Aripioare de pui', 'Alegeți din BBQ, buffalo sau usturoi parmezan, servite cu sos ranch.', '../src/assets/images/aripioare.jpg', 32.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Aripioare de pui
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 1.7: Hummus și platou cu pita -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/hummus_pita.jpg" width="200" class="" alt="Hummus și platou cu pita" 
+                onclick="showPopup('Hummus și platou cu pita', 'Hummus clasic servit cu pita și legume proaspete.', '../src/assets/images/hummus_pita.jpg', 24.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Hummus și platou cu pita
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 1.8: Bețișoare de mozzarella -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/betisoare_mozzarella.jpg" width="200" class="" alt="Bețișoare de mozzarella" 
+                onclick="showPopup('Bețișoare de mozzarella', 'Bețișoare de mozzarella pane, servite cu sos marinara.', '../src/assets/images/betisoare_mozzarella.jpg', 26.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Bețișoare de mozzarella
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 1.9: Ouă umplute -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/oua_umplute.jpg" width="200" class="" alt="Ouă umplute" 
+                onclick="showPopup('Ouă umplute', 'Ouă umplute tradiționale, cu un vârf de paprika.', '../src/assets/images/oua_umplute.jpg', 22.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Ouă umplute
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 1.10: Dips de spanac și anghinare -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/dips_spanac_anghinare.jpg" width="200" class="" alt="Dips de spanac și anghinare" 
+                onclick="showPopup('Dips de spanac și anghinare', 'Dip cremos de spanac și anghinare servit cu chipsuri de tortilla.', '../src/assets/images/dips_spanac_anghinare.jpg', 28.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Dips de spanac și anghinare
+            </h6>
+        </div>
+    </div>
+</div>
+
+        <!-- Secțiunea Feluri Principale -->
+        <div class="row justify-content-center text-center mt-5">
+            <div class="col-md-8 col-lg-6">
+                <h2 class="text-dblue">Feluri Principale</h2>
+            </div>
+        </div>
+        <div class="row">
+<!-- Card 2.1: Friptură Ribeye la grătar -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/ribeye.jpg" width="200" class="" alt="Friptură Ribeye la grătar" 
+                onclick="showPopup('Friptură Ribeye la grătar', 'Friptură de 340g, gătită după preferințele dumneavoastră, servită cu piure de cartofi cu usturoi și legume sezoniere.', '../src/assets/images/ribeye.jpg', 85.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Friptură Ribeye la grătar
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 2.2: Pui Parmesan -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/pui_parmesan.jpg" width="200" class="" alt="Pui Parmesan" 
+                onclick="showPopup('Pui Parmesan', 'Piept de pui pane, acoperit cu sos marinara și mozzarella topită, servit cu spaghetti.', '../src/assets/images/pui_parmesan.jpg', 55.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Pui Parmesan
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 2.3: File de somon -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/somon.jpg" width="200" class="" alt="File de somon" 
+                onclick="showPopup('File de somon', 'Somon la grătar, servit cu quinoa și sparanghel fiert.', '../src/assets/images/somon.jpg', 75.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                File de somon
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 2.4: Stir-fry cu legume -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/stir_fry_legume.jpg" width="200" class="" alt="Stir-fry cu legume" 
+                onclick="showPopup('Stir-fry cu legume', 'Legume amestecate gătite cu sos de soia, usturoi și ghimbir, servite cu orez jasmin.', '../src/assets/images/stir_fry_legume.jpg', 40.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Stir-fry cu legume
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 2.5: Mac și brânză cu homar -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/mac_si_branza_homar.jpg" width="200" class="" alt="Mac și brânză cu homar" 
+                onclick="showPopup('Mac și brânză cu homar', 'Mac și brânză cremoasă cu carne de homar și un strat crocant de pesmet.', '../src/assets/images/mac_si_branza_homar.jpg', 70.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Mac și brânză cu homar
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 2.6: Sandviș cu porc tras la slow-cook -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/sandvis_porc.jpg" width="200" class="" alt="Sandviș cu porc tras la slow-cook" 
+                onclick="showPopup('Sandviș cu porc tras la slow-cook', 'Pulpe de porc la slow-cook cu sos BBQ, servite pe o chiflă brioche cu salată de varză.', '../src/assets/images/sandvis_porc.jpg', 45.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Sandviș cu porc tras la slow-cook
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 2.7: Tacos cu carne de vită -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/tacos_vita.jpg" width="200" class="" alt="Tacos cu carne de vită" 
+                onclick="showPopup('Tacos cu carne de vită', 'Tacos moi cu carne de vită condimentată, salată, brânză, salsa și smântână.', '../src/assets/images/tacos_vita.jpg', 38.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Tacos cu carne de vită
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 2.8: Eggplant Parmesan -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/eggplant_parmesan.jpg" width="200" class="" alt="Eggplant Parmesan" 
+                onclick="showPopup('Eggplant Parmesan', 'Vinete pane, acoperite cu marinara și mozzarella, servite cu spaghetti.', '../src/assets/images/eggplant_parmesan.jpg', 50.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Eggplant Parmesan
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 2.9: Fajitas cu pui -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/fajitas_pui.jpg" width="200" class="" alt="Fajitas cu pui" 
+                onclick="showPopup('Fajitas cu pui', 'Pui marinat, la grătar, cu ardei și ceapă, servit cu tortillas, guacamole și salsa.', '../src/assets/images/fajitas_pui.jpg', 58.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Fajitas cu pui
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 2.10: Shrimp Scampi -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/shrimp_scampi.jpg" width="200" class="" alt="Shrimp Scampi" 
+                onclick="showPopup('Shrimp Scampi', 'Creveți sotati în unt cu usturoi și sos de vin alb, serviți cu linguine.', '../src/assets/images/shrimp_scampi.jpg', 68.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Shrimp Scampi
+            </h6>
+        </div>
+    </div>
+</div>
+
+        <!-- Secțiunea Garnituri -->
+        <div class="row justify-content-center text-center mt-5">
+            <div class="col-md-8 col-lg-6">
+                <h2 class="text-dblue">Garnituri</h2>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Adaugă aici cardurile pentru Garnituri -->
+            <!-- Card 3.1: Piure de cartofi cu usturoi -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/piure_cartofi.jpg" width="200" class="" alt="Piure de cartofi cu usturoi" 
+                onclick="showPopup('Piure de cartofi cu usturoi', 'Piure cremos de cartofi cu usturoi prăjit.', '../src/assets/images/piure_cartofi.jpg', 18.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Piure de cartofi cu usturoi
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 3.2: Cartofi dulci prăjiți -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/cartofi_dulci.jpg" width="200" class="" alt="Cartofi dulci prăjiți" 
+                onclick="showPopup('Cartofi dulci prăjiți', 'Cartofi dulci crocanți serviți cu sos de muștar dulce.', '../src/assets/images/cartofi_dulci.jpg', 22.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Cartofi dulci prăjiți
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 3.3: Salată Caesar -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/salata_caesar.jpg" width="200" class="" alt="Salată Caesar" 
+                onclick="showPopup('Salată Caesar', 'Salată verde romaine, crutoane și brânză parmezan, amestecate cu dressing Caesar.', '../src/assets/images/salata_caesar.jpg', 20.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Salată Caesar
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 3.4: Legume la grătar -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/legume_gratar.jpg" width="200" class="" alt="Legume la grătar" 
+                onclick="showPopup('Legume la grătar', 'Amestec de legume sezoniere gătite pe grătar.', '../src/assets/images/legume_gratar.jpg', 24.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Legume la grătar
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 3.5: Ceapă prăjită -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/ceapa_prajita.jpg" width="200" class="" alt="Ceapă prăjită" 
+                onclick="showPopup('Ceapă prăjită', 'Ceapă prăjită crocantă servită cu sos de dipping.', '../src/assets/images/ceapa_prajita.jpg', 18.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Ceapă prăjită
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 3.6: Cartofi prăjiți -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/cartofi_prajiti.jpg" width="200" class="" alt="Cartofi prăjiți" 
+                onclick="showPopup('Cartofi prăjiți', 'Cartofi prăjiți aurii cu ketchup sau aioli.', '../src/assets/images/cartofi_prajiti.jpg', 15.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Cartofi prăjiți
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 3.7: Sparanghel fiert -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/sparanghel.jpg" width="200" class="" alt="Sparanghel fiert" 
+                onclick="showPopup('Sparanghel fiert', 'Sparanghel proaspăt fiert, stropit cu ulei de măsline.', '../src/assets/images/sparanghel.jpg', 22.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Sparanghel fiert
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 3.8: Salată de varză -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/salata_varza.jpg" width="200" class="" alt="Salată de varză" 
+                onclick="showPopup('Salată de varză', 'Salată clasică de varză cu dressing cremos.', '../src/assets/images/salata_varza.jpg', 16.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Salată de varză
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 3.9: Pilaf de orez -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/pilaf_orez.jpg" width="200" class="" alt="Pilaf de orez" 
+                onclick="showPopup('Pilaf de orez', 'Orez pufos gătit cu ierburi și legume.', '../src/assets/images/pilaf_orez.jpg', 20.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Pilaf de orez
+            </h6>
+        </div>
+    </div>
+</div>
+
+
+
+        <!-- Secțiunea Deserturi -->
+        <div class="row justify-content-center text-center mt-5">
+            <div class="col-md-8 col-lg-6">
+                <h2 class="text-dblue">Deserturi</h2>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Adaugă aici cardurile pentru Deserturi -->
+           <!-- Card 4.1: Prăjitură cu ciocolată lichidă -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/prajitura_ciocolata.jpg" width="200" class="" alt="Prăjitură cu ciocolată lichidă" 
+                onclick="showPopup('Prăjitură cu ciocolată lichidă', 'Prăjitură decadentă cu interior lichid de ciocolată.', '../src/assets/images/prajitura_ciocolata.jpg', 30.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Prăjitură cu ciocolată lichidă
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 4.2: Tiramisu -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/tiramisu.jpg" width="200" class="" alt="Tiramisu" 
+                onclick="showPopup('Tiramisu', 'Desert italian clasic cu pișcoturi, mascarpone și cafea.', '../src/assets/images/tiramisu.jpg', 32.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Tiramisu
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 4.3: Cheesecake cu compot de fructe de pădure -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/cheesecake.jpg" width="200" class="" alt="Cheesecake cu compot de fructe de pădure" 
+                onclick="showPopup('Cheesecake cu compot de fructe de pădure', 'Cheesecake cremos servit cu compot de fructe de pădure.', '../src/assets/images/cheesecake.jpg', 35.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Cheesecake cu compot de fructe de pădure
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 4.4: Plăcintă cu mere și înghețată de vanilie -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/placinta_mere.jpg" width="200" class="" alt="Plăcintă cu mere și înghețată de vanilie" 
+                onclick="showPopup('Plăcintă cu mere și înghețată de vanilie', 'Plăcintă caldă cu mere servită cu înghețată de vanilie.', '../src/assets/images/placinta_mere.jpg', 28.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Plăcintă cu mere și înghețată de vanilie
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Card 4.5: Crème Brûlée -->
+<div class="col-md-4">
+    <div class="card card-shad">
+        <picture>
+            <img src="../src/assets/images/creme_brulee.jpg" width="200" class="" alt="Crème Brûlée" 
+                onclick="showPopup('Crème Brûlée', 'Desert franțuzesc cu cremă de vanilie și strat crocant de zahăr caramelizat.', '../src/assets/images/creme_brulee.jpg', 30.00, 70.00)">
+        </picture>
+        <div style="text-align: center; padding: 10px;">
+            <h6 style="font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color: #333;">
+                Crème Brûlée
+            </h6>
+        </div>
+    </div>
+</div>
+
+</section>
+
+
+<!-- Pop-up -->
+<div class="popup-overlay" id="popup-overlay"></div>
+<div class="popup" id="popup">
+    <div class="popup-header">
+        <h3 id="popup-title">Titlu</h3>
+        <button class="popup-close" onclick="closePopup()">&times;</button>
+    </div>
+    <img id="popup-image" src="" alt="Imagine produs">
+    <div class="popup-price" id="popup-price">49,00 Lei <span>70,00 Lei</span></div>
+    <div class="quantity-control">
+<button id="decrease-quantity" onclick="updateQuantity(-1)">-</button>
+<span class="quantity-value" id="quantity">1</span>
+<button id="increase-quantity" onclick="updateQuantity(1)">+</button>
+
+    </div>
+    <p class="popup-content" id="popup-content">Conținut</p>
+    <button class="popup-button" id="add-to-cart" onclick="addToCart()">Adaugă în coș</button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    let quantity = 1; // Cantitatea inițială
+    let basePrice = 0; // Prețul de bază al produsului
+    let currentQuantity = 1; // Cantitatea curentă
+
+    // Funcția pentru a actualiza cantitatea și prețul
+    function updateQuantity(change) {
+        const quantityElement = document.getElementById('quantity');
+        const popupPriceElement = document.getElementById('popup-price');
+
+        if (!quantityElement || !popupPriceElement) {
+            console.error('Elementele necesare pentru actualizare nu au fost găsite!');
+            return;
+        }
+
+        // Actualizăm cantitatea, menținând minimum 1
+        currentQuantity = Math.max(1, currentQuantity + change);
+        quantityElement.textContent = currentQuantity;
+
+        // Actualizăm prețul total
+        const totalPrice = (basePrice * currentQuantity).toFixed(2);
+        const oldPrice = (basePrice * 1.43 * currentQuantity).toFixed(2);
+        popupPriceElement.innerHTML = `${totalPrice} Lei <span>`;
+    }
+
+    // Funcția pentru a afișa pop-up-ul
+    window.showPopup = function (title, content, image, price, oldPrice) {
+        document.getElementById('popup-title').textContent = title;
+        document.getElementById('popup-content').textContent = content;
+        document.getElementById('popup-image').src = image;
+
+        basePrice = price; // Setăm prețul de bază al produsului
+        currentQuantity = 1; // Resetăm cantitatea curentă la 1
+        document.getElementById('quantity').textContent = currentQuantity;
+
+        // Actualizăm prețul afișat
+        const popupPriceElement = document.getElementById('popup-price');
+        if (popupPriceElement) {
+            popupPriceElement.innerHTML = `${price.toFixed(2)} Lei <span>`;
+        }
+
+        // Afișăm pop-up-ul și overlay-ul
+        document.getElementById('popup').style.display = 'block';
+        document.getElementById('popup-overlay').style.display = 'block';
+    };
+
+    // Funcția pentru a închide pop-up-ul
+    window.closePopup = function () {
+        document.getElementById('popup').style.display = 'none';
+        document.getElementById('popup-overlay').style.display = 'none';
+    };
+
+ // Atașăm evenimentele pentru butoanele de incrementare/decrementare
+    document.getElementById('decrease-quantity').onclick = function () {
+        updateQuantity(-1);
+    };
+
+    document.getElementById('increase-quantity').onclick = function () {
+        updateQuantity(1);
+    };
+    // Funcția pentru a adăuga în coș
+    window.addToCart = function () {
+        const productName = document.getElementById('popup-title').textContent;
+        const quantity = currentQuantity;
+        const productPrice = basePrice;
+
+        // Trimite datele către server
+
+        fetch('/atestat/html/add_to_cart.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                name: productName,
+                price: productPrice,
+                quantity: quantity,
+            }),
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Produsul a fost adăugat în coș!');
+                    closePopup();
+                } else {
+                    alert('Eroare la adăugarea produsului în coș: ' + data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Eroare:', error);
+                alert('A apărut o problemă.');
+            });
+    };
+
+   
+});
+
+
+</script>
+
+    <!-- Body end -->
+
+    <!-- Footer start -->
+
+    <button id="myBtn" class="bg-grad" title="Go to top"><i class="mdi mdi-arrow-up"></i></button>
+
+    <footer class="bg-grad">
+        <div class="footer2 font-14">
+            <div class="container border-bottom pb-3">
+                <div class="d-block d-md-flex justify-content-between">
+                    <a href="index.html"><img src="../src/assets/images/logo_landscape.png" class="main-logo " width="200"
+                            alt="AETS"></a>
+
+                </div>
+            </div>
+            <div class="f2-middle pt-3 pb-3">
+                <div class="container">
+                    <div class="row border-bottom">
+
+                        <div class="col-lg-4 col-md-6 main-foot">
+                            <p class="para">Te invităm la Doserti, locul unde fiecare masă devine o sărbătoare a gusturilor! Meniul nostru este plin de preparate delicioase, gătite cu cele mai proaspete ingrediente și pasiune de către bucătari talentați. Fie că vii pentru o cină relaxantă cu prietenii sau o ocazie specială, îți promitem o experiență culinară de neuitat, plină de arome, căldură și ospitalitate. Vino flămând, pleacă fericit – Doserti este locul perfect pentru tine!</p>
+                                <div class="main-foot-gap">
+                                    <a href="#"><i class="mdi mdi-facebook"></i></a>
+                                    <a href="#"><i class="mdi mdi-twitter"></i></a>
+                                    <a href="#"><i class="mdi mdi-linkedin"></i></a>
+                                    <a href="#"><i class="mdi mdi-pinterest"></i></a>
+                                    <a href="#"><i class="mdi mdi-instagram"></i></a>
+                                </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 main-foot">
+                            <ul class="general-listing">
+                                <li><a href="index.html"> Acasă</a></li>
+                                <li><a href="meniu.html"> Meniu</a></li>
+                                <li><a href="despre-noi.html"> Despre Noi </a></li>
+                                <li><a href="contact-us.html"> Contact </a></li>
+                            </ul>
+                        </div>
+                       
+                       <div class="col-lg-3 col-md-6 main-foot ms-auto">
+<div class="d-flex justify-content-start align-items-center mb-3">
+    <div class="display-7 me-2"><i class="mdi mdi-timeline-clock-outline"></i></div>
+    <div class="info"><span>8:00 - 22:00</span></div>
+</div>
+<!-- Telefon -->
+<div class="d-flex justify-content-start align-items-center mb-3">
+    <div class="display-7 me-2"><i class="mdi mdi-phone-voip"></i></div>
+    <div class="info"><a href="tel:+1-6174305341">+40 720 345 790</a></div>
+</div>
+<!-- Email -->
+<div class="d-flex justify-content-start align-items-center mb-3">
+    <div class="display-7 me-2"><i class="mdi mdi-email-edit-outline"></i></div>
+    <div class="info"><a href="#">info@doserti.com</a></div>
+</div>
+<!-- Adresă -->
+<div class="d-flex justify-content-start align-items-center">
+    <div class="display-7 me-2"><i class="mdi mdi-home-map-marker"></i></div>
+    <div class="info">
+        <p class="mb-0">
+            Strada Ghirlandei 4, Timișoara 300231
+        </p>
+    </div>
+</div>
+</div>
+
+
+
+                      
+
+                    </div>
+                </div>
+            </div>
+            <div class=" align-self-center copyright text-center  mt-3 text-white  pe-2 ps-2">
+                <span class="text-white">Developed by <a href="#" class="text-white" target='blank'><b>STULIANEC ADRIAN + DOMIL SERBAN</b></a></span> © 2024 All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer end -->
+
+    <script src="../src/assets/js/jquery.js"></script>
+    <script src="../src/assets/js/bootstrap.min.js"></script>
+    <script src="../src/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/assets/js/aos.js"></script>
+    <script src="../src/assets/js/owl.carousel.min.js"></script>
+    <script src="../src/assets/js/slick.js"></script>
+    <script src="../src/assets/js/script.js"></script>
+    
+</body>
+
+</html>
