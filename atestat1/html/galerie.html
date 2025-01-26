@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoSerti</title>
+    <link rel="icon" type="image/x-icon" href="../src/assets/images/logo.ico">
+    <link rel="stylesheet" href="../src/assets/css/aos.css">
+    <link rel="stylesheet" href="../src/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../src/assets/css/slick-theme.css">
+    <link rel="stylesheet" href="../src/assets/css/slick.css">
+    <link rel="stylesheet" href="../src/assets/css/styles.css">
+</head>
+<style>
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-item h6 {
+            margin: 0;
+        }
+
+        .cart-item .quantity-control {
+            display: flex;
+            align-items: center;
+        }
+
+        .cart-item .quantity-control button {
+            background: none;
+            border: 2px solid #e63946;
+            color: #e63946;
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .cart-item .quantity-value {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        .cart-summary {
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        .finalize-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background: #e63946;
+            color: white;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .finalize-button:hover {
+            background: #d62828;
+        }
+    </style>
+
+<body>
+      <div class="collapse navbar-collapse" id="header16a">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="mdi mdi-email-outline fs-3 align-middle"></i> info@doserti.com </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="mdi mdi-facebook fs-3"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="mdi mdi-twitter fs-3"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="mdi mdi-linkedin fs-3"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="mdi mdi-pinterest fs-3"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="mdi mdi-instagram fs-3"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Infobar  -->
+        <div class="h16-infobar">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg h16-info-bar">
+                    <a class="navbar-brand">
+                        <img src="../src/assets/images/logo_landscape.png" width="200" alt="logo234" /> 
+                       
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#h16-info"
+                        aria-controls="h16-info" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="mdi mdi-dots-vertical"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="h16-info">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link">
+                                    <div class="display-6 m-r-10 text-dblue-sub f-w">
+                                        <i class="mdi mdi-clock-check-outline"></i>
+                                    </div>
+                                    <div>
+                                        <small class="text-dblue-sub f-w">Luni - Sambata  <span class="">8:00 - 22:00</span>
+                                            <br />Duminica - Inchis </small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">
+                                    <div class="display-6 m-r-10 text-dblue-sub f-w">
+                                        <i class="mdi mdi-phone text-dblue-sub f-w"></i>
+                                    </div>
+                                    <div>
+                                        <small class=" text-dblue-sub f-w">Rezervari</small>
+                                        <h5 class="font-bold">+40 720 345 790</h5>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar  -->
+<div class="h16-navbar mb-0">
+    <nav class="navbar navbar-expand-lg h16-nav bg-grad-slid">
+        <div class="container p-0">
+            <a class="d-lg-none text-white">Navigation</a>
+            <button class="navbar-toggler text-white" type="button" data-toggle="collapse"
+                data-target="#header16" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="mdi mdi-menu-open"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="header16">
+                <div class="hover-dropdown w-100 d-flex justify-content-between">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../html/index.html">Acasă</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/meniu.html">Meniu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/despre-noi.html">Despre noi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/contact-us.html">Contact</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/galerie.html">Coșul meu</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+    </header>
+
+
+    <!-- Header end -->
+
+    <!-- Body start -->
+
+<div class="container mt-5">
+    <h2 class="text-center">Co?ul meu</h2>
+
+    <!-- Lista de produse în co? -->
+    <div id="cart-items">
+        <!-- Produsele vor fi generate dinamic -->
+    </div>
+
+    <!-- Subtotal ?i Total -->
+    <div class="cart-summary">
+        <div class="d-flex justify-content-between">
+            <span>Subtotal</span>
+            <span id="subtotal">0.00 lei</span>
+        </div>
+        <div class="d-flex justify-content-between">
+            <span>Cost livrare</span>
+            <span id="delivery-cost">0.00 lei</span>
+        </div>
+        <div class="d-flex justify-content-between">
+            <strong>Total</strong>
+            <strong id="total">0.00 lei</strong>
+        </div>
+    </div>
+
+    <!-- Buton de finalizare -->
+    <button class="finalize-button" onclick="finalizeOrder()">Finalizeaza comanda <span id="finalize-total">0.00 lei</span></button>
+</div>
+
+<script>
+function loadCart() {
+    $.ajax({
+        url: 'get_cart.php',  // Asigura-te ca calea este corecta
+        method: 'GET',
+        dataType: 'json',
+        success: function(response) {
+            console.log("Raspuns de la server:", response); // Afi?eaza raspunsul complet
+            if (response.success) {
+                console.log("Co?ul con?ine: ", response.cart);  // Verifica ce prime?ti
+                displayCart(response.cart);  // Func?ia care actualizeaza co?ul în HTML
+            } else {
+                console.log("Eroare: " + response.message);
+            }
+        },
+        error: function(xhr, status, error) {
+            console.log("Eroare AJAX: " + error);
+        }
+    });
+}
+
+
+function displayCart(cart) {
+    let cartItemsDiv = document.getElementById('cart-items');
+    cartItemsDiv.innerHTML = '';  // Resetam con?inutul
+
+    let subtotal = 0;
+
+    cart.forEach(item => {
+        let itemElement = document.createElement('div');
+        itemElement.classList.add('cart-item');
+
+        itemElement.innerHTML = `
+            <h6>${item.name}</h6>
+            <div class="quantity-control">
+                <button onclick="decreaseQuantity(${item.id})">-</button>
+                <span class="quantity-value" id="quantity-${item.id}">${item.quantity}</span>
+                <button onclick="increaseQuantity(${item.id})">+</button>
+            </div>
+            <span>${(item.price * item.quantity).toFixed(2)} lei</span>
+        `;
+
+        cartItemsDiv.appendChild(itemElement);
+        subtotal += item.price * item.quantity;
+    });
+
+    document.getElementById('subtotal').textContent = subtotal.toFixed(2) + ' lei';
+    let deliveryCost = 10;  // Exemplu de cost livrare
+    document.getElementById('delivery-cost').textContent = deliveryCost.toFixed(2) + ' lei';
+    let total = subtotal + deliveryCost;
+    document.getElementById('total').textContent = total.toFixed(2) + ' lei';
+    document.getElementById('finalize-total').textContent = total.toFixed(2) + ' lei';
+}
+
+function increaseQuantity(itemId) {
+    $.ajax({
+        url: 'update_cart.php',
+        method: 'POST',
+        data: { action: 'increase', itemId: itemId },
+        success: function(response) {
+            if (response.success) {
+                loadCart();
+            } else {
+                console.log("Eroare la actualizarea cantita?ii");
+            }
+        }
+    });
+}
+
+function decreaseQuantity(itemId) {
+    $.ajax({
+        url: 'update_cart.php',
+        method: 'POST',
+        data: { action: 'decrease', itemId: itemId },
+        success: function(response) {
+            if (response.success) {
+                loadCart();
+            } else {
+                console.log("Eroare la actualizarea cantita?ii");
+            }
+        }
+    });
+}
+
+function finalizeOrder() {
+    alert("Comanda a fost plasata cu succes");
+}
+
+
+// Încarca co?ul când pagina se încarca
+window.onload = function() {
+    loadCart();
+};
+</script>
+
+
+
+
+
+    <!-- Body end -->
+
+    <!-- Footer start -->
+
+    <button id="myBtn" class="bg-grad" title="Go to top"><i class="mdi mdi-arrow-up"></i></button>
+
+
+    <!-- Footer end -->
+
+    <script src="../src/assets/js/jquery.js"></script>
+    <script src="../src/assets/js/bootstrap.min.js"></script>
+    <script src="../src/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/assets/js/aos.js"></script>
+    <script src="../src/assets/js/owl.carousel.min.js"></script>
+    <script src="../src/assets/js/slick.js"></script>
+    <script src="../src/assets/js/script.js"></script>
+    
+</body>
+
+</html>

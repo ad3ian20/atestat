@@ -1,0 +1,326 @@
+.heading-h2 {
+  margin-bottom: $gap-desktop-20;
+}
+#charitycarousel {
+  img {
+    max-width: none;
+    width: 100%;
+  }
+  .carousel-caption {
+    h2 {
+      margin-bottom: $gap-desktop-20;
+    }
+    .card {
+      width: 400px;
+      padding: $gap-desktop-30;
+      .d-flex {
+        justify-content: space-between;
+        align-items: center;
+        .label-btn {
+          border-radius: 10px;
+          padding: 4px 10px;
+          background: $black;
+          font-size: 12px;
+          color: $white;
+        }
+        color: $black;
+        span {
+          padding: $gap-desktop-10;
+        }
+      }
+      h5 {
+        margin: $gap-desktop-10 0;
+      }
+    }
+  }
+  .carousel-indicators {
+    margin-bottom: 2px;
+  }
+  &.charitycarousel {
+  }
+}
+.charitycarousel {
+  .carousel-item {
+    background-size: cover;
+    background-image: url("../images/charity1-mob.jpg");
+    &:nth-child(2) {
+      background-image: url("../images/charity2-mob.jpg");
+    }
+    min-height: 350px;
+  }
+}
+.charity-help {
+  margin-top: $gap-desktop-40;
+  .card-bx {
+    margin-top: $gap-desktop-30;
+    h4 {
+      margin: $gap-desktop-20 0;
+    }
+  }
+}
+.charity-needhelp {
+  margin-top: $gap-desktop-40;
+  padding: $gap-desktop-40 0;
+  background: $bg-light;
+
+  .card {
+    margin-top: $gap-desktop-30;
+    margin-left: $gap-desktop-5;
+    margin-right: $gap-desktop-5;
+
+    img {
+      width: 100%;
+    }
+
+    .card-body {
+      padding: $gap-desktop-20;
+
+      p {
+        margin: $gap-desktop-10 0;
+      }
+
+      .progress {
+        height: 5px;
+
+        .progress-bar {
+          background: linear-gradient(
+            to right,
+            #1051c2 0%,
+            #6a11cb 70%
+          ) !important;
+        }
+      }
+    }
+  }
+}
+.charity-events {
+  margin-top: $gap-desktop-40;
+  .card {
+    margin-top: $gap-desktop-30;
+    border: none;
+    img {
+      width: 100%;
+    }
+    .date-pos {
+      padding: 10px;
+      display: grid;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      color: #ffffff;
+      border-radius: 4px;
+      text-align: center;
+      background: linear-gradient(to right, #1051c2 0%, #6a11cb 70%);
+    }
+    h4 {
+      margin: $gap-desktop-10 0;
+    }
+    .linking {
+      width: fit-content;
+      &:hover {
+        color: $red;
+        .mdi {
+          margin-left: 10px;
+          transition: 0.2s ease-in;
+        }
+      }
+    }
+    &:hover {
+      transform: translateY(-10px);
+      transition: 0.2s ease-in;
+    }
+  }
+}
+.charity-card {
+  margin-top: $gap-desktop-40;
+  position: relative;
+  text-align: center;
+  color: white;
+  .card {
+    padding: $gap-desktop-40;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 35%;
+    transform: translate(-50%, -50%);
+  }
+}
+.charity-latestnews {
+  margin-top: $gap-desktop-40;
+  span {
+    color: $red;
+  }
+  p {
+    margin: $gap-desktop-20 0;
+  }
+  form {
+    .form-group {
+      margin-top: $gap-desktop-20;
+    }
+  }
+  .img-text {
+    display: flex;
+    margin-top: $gap-desktop-30;
+    .img-bx {
+      margin-right: $gap-desktop-20;
+      width: 150px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+.charity-review {
+  padding: $gap-desktop-40 0;
+  background: $bg-light;
+  .card {
+    margin-top: $gap-desktop-30;
+    width: calc(100% - 10px) !important;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: none;
+    padding: $gap-desktop-40 55px;
+    .thumb {
+      background: linear-gradient(to right, #1051c2 0%, #6a11cb 70%);
+      position: relative;
+      padding: 10px 20px 10px;
+      padding-left: 90px;
+      margin-left: -35px;
+      display: inline-block;
+      color: #ffffff;
+      margin-bottom: 30px;
+      img {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        left: 20px;
+        top: -10px;
+      }
+    }
+    h5 {
+      margin: $gap-desktop-20 0;
+    }
+    .mdi {
+      color: #6a11cb;
+    }
+  }
+}
+.charity-joinus {
+    padding: $gap-desktop-40 0;
+    margin-top: $gap-desktop-40;
+    background-image: url(../images/charity-bg.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+
+    h2 {
+        color: $white;
+    }
+}
+
+@media (max-width:826px){
+    .charity-joinus {
+        background-attachment: inherit;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 826px) {
+}
+
+@media only screen and (max-width: 825px) and (min-width: 521px) {
+  .charity-card {
+    .card {
+      width: auto;
+      position: inherit;
+      top: 0;
+      left: 0;
+      transform: translate(-0%, -0%);
+    }
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  #charitycarousel {
+    img {
+      width: auto;
+    }
+    .carousel-caption {
+      padding: 10px;
+
+      width: 100%;
+      bottom: auto;
+
+      .card {
+        width: 100%;
+      }
+    }
+  }
+  .charity-help {
+    margin-top: $gap-mob-30;
+  }
+  .charity-needhelp {
+    margin-top: $gap-mob-30;
+    padding: $gap-mob-30 0;
+    .card {
+      .card-body {
+        p {
+          padding: $gap-mob-10;
+        }
+      }
+    }
+  }
+  .charity-events {
+    margin-top: $gap-mob-30;
+    .card {
+      margin-top: $gap-mob-20;
+    }
+  }
+  .charity-card {
+    margin-top: $gap-mob-30;
+    .card {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      transform: translate(-0%, -0%);
+    }
+  }
+  .charity-latestnews {
+    margin-top: $gap-mob-30;
+    form {
+      .form-group {
+        margin-top: $gap-mob-10;
+        .custom-control-label {
+          font-size: $font-size-12;
+        }
+      }
+    }
+    .d-flex {
+      margin-top: $gap-mob-20;
+    }
+    .img-text {
+      margin-top: $gap-mob-20;
+      .img-bx {
+        width: 100vw;
+      }
+    }
+  }
+  .charity-review {
+    padding: $gap-mob-30 0;
+    .card {
+      width: 100% !important;
+      padding: 20px;
+      margin: 10px;
+
+      .thumb {
+        padding-left: 86px;
+        margin: 0;
+      }
+      h5 {
+        margin: 15px 0;
+      }
+    }
+  }
+}

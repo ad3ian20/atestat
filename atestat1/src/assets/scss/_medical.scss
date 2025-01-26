@@ -1,0 +1,281 @@
+#charitycarousel {
+  &.madical-carousel {
+    .card {
+      text-align: center;
+      width: 370px;
+      height: 370px;
+      border-radius: 50%;
+      padding: 40px;
+      align-items: center;
+      justify-content: center;
+      h5 {
+        margin: 20px 0;
+      }
+    }
+    .carousel-item {
+      background-size: cover;
+      background-image: url("../images/madical-banner1-mob.jpg");
+      &:nth-child(2) {
+        background-image: url("../images/medical-banner2-mob.jpg");
+      }
+      background-size: cover;
+      min-height: 350px;
+    }
+  }
+}
+
+.medical-card {
+  margin-top: $gap-desktop-40;
+
+  .card-bx {
+    padding: $gap-desktop-20;
+    background: $bg-light;
+    margin: $gap-desktop-10;
+    background: linear-gradient(to right, #b10118 30%, #9710a5 100%) !important;
+    color: $white;
+
+    p {
+      color: $white;
+    }
+
+    .linking {
+      font-weight: bold;
+      width: fit-content;
+
+      &:hover {
+        color: $red;
+
+        .mdi {
+          margin-left: 10px;
+          transition: 0.2s ease-in;
+        }
+      }
+    }
+
+    &:hover {
+      transition: 0.2s ease-in;
+      transform: scale(1.04);
+      background: linear-gradient(
+        to right,
+        #9710a5 30%,
+        #b10118 100%
+      ) !important;
+      color: $white;
+    }
+  }
+}
+.medical-slider {
+  .slick-dots {
+    text-align: start;
+  }
+}
+.medical-tab {
+  background: $bg-light;
+  margin-top: $gap-desktop-40;
+  padding: $gap-desktop-40 0;
+  img {
+    width: 100%;
+  }
+}
+.blogs {
+  padding: $gap-desktop-40 0;
+  background: $bg-light;
+  margin-top: $gap-desktop-40;
+  .card {
+    margin-top: $gap-desktop-30;
+    border: none;
+    .card-body {
+      padding: $gap-desktop-20;
+    }
+    img {
+      width: 100%;
+    }
+    &:hover {
+      transform: translateY(-10px);
+      transition: 0.2s ease-in;
+    }
+  }
+}
+.appointment {
+  padding: $gap-desktop-40 0;
+  background: $red;
+  margin-top: $gap-desktop-40;
+  .text-bx {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h2 {
+      color: $white;
+    }
+  }
+}
+.medical-services {
+  padding: $gap-desktop-40 0;
+
+  margin-top: $gap-desktop-40;
+  .card {
+    border: none;
+    margin-top: $gap-desktop-30;
+    .icon-position {
+      background-image: url(../images/mdicard1.jpg);
+      position: relative;
+      background-size: cover;
+      background-position: center center;
+      min-height: 200px;
+      .icon-bx {
+        position: absolute;
+        right: -26px;
+        top: 20px;
+        width: 80px;
+        background: linear-gradient(to right, #1051c2 0%, #6a11cb 70%);
+        color: $white;
+        line-height: 80px;
+        text-align: center;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .mdi {
+          font-size: 35px;
+        }
+      }
+      &.img1 {
+        background-image: url(../images/mdicard2.jpg);
+      }
+      &.img2 {
+        background-image: url(../images/mdicard3.jpg);
+      }
+      &.img3 {
+        background-image: url(../images/mdicard4.jpg);
+      }
+    }
+    .text-bx {
+      padding: 40px;
+      p {
+        margin: $gap-desktop-20 0;
+      }
+      .linking {
+        &:hover {
+          .mdi {
+            margin-left: 10px;
+            transition: 0.2s ease-in;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .medical-slider {
+    .slick-dots {
+      margin-top: 80px;
+      text-align: start;
+      display: contents;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .medical-services {
+    .card {
+      .text-bx {
+        padding: $gap-mob-20;
+      }
+    }
+  }
+  #charitycarousel {
+    &.madical-carousel {
+      .card {
+        p {
+          font-size: $font-size-12;
+        }
+        height: 260px;
+        width: 260px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 426px) {
+  .medical-slider {
+    .slick-dots {
+      li {
+        button {
+          height: 40px;
+          width: 40px;
+          bottom: -50px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .medical-card {
+    .card-bx {
+      padding: $gap-mob-10;
+    }
+  }
+  .blogs {
+    padding: $gap-mob-30 0;
+    margin-top: $gap-mob-30;
+    .card {
+      margin-bottom: $gap-mob-20;
+    }
+  }
+  .appointment {
+    .text-bx {
+      display: block;
+    }
+  }
+  .medical-services {
+    .card {
+      margin-top: $gap-mob-20;
+      .row {
+        margin: 0;
+      }
+      .icon-position {
+        .icon-bx {
+          width: 40px;
+          line-height: 40px;
+          right: 0;
+          top: -20px;
+          .mdi {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+  .medical-slider {
+    .text {
+      text-align: center;
+    }
+    img {
+      width: 150px;
+      margin: 0 auto;
+    }
+    .slick-dots {
+      text-align: center;
+      li {
+        button {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+  }
+
+  #charitycarousel {
+    &.madical-carousel {
+      .card {
+        margin: 0 auto;
+        width: 300px;
+        height: 300px;
+        padding: 50px;
+        h5 {
+        }
+      }
+    }
+  }
+}

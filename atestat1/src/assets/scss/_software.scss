@@ -1,0 +1,56 @@
+.software-banner {
+  background-image: url("../images/software-banner-mob.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.soft-flexcard {
+  margin-top: $gap-desktop-40;
+  padding: $gap-desktop-40 0;
+  .card {
+    text-align: center;
+    padding: $gap-desktop-30;
+    margin-top: $gap-desktop-30;
+    .mdi {
+      font-size: 80px;
+    }
+  }
+}
+.software-flexcard {
+  margin-top: $gap-desktop-40;
+  ul {
+    padding-left: 0;
+    list-style: none;
+    li {
+      .mdi {
+        color: #1051c2;
+      }
+    }
+  }
+}
+.software-form {
+  padding: $gap-desktop-40 0;
+  margin-top: $gap-desktop-40;
+  .form-group {
+    margin-top: $gap-desktop-20;
+  }
+  .d-flex {
+    margin-top: $gap-desktop-20;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 426px) {
+  .software-form {
+    .heading-h2 {
+      margin-top: $gap-desktop-30;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .software-form {
+    .heading-h2 {
+      margin-top: $gap-mob-20;
+    }
+  }
+}

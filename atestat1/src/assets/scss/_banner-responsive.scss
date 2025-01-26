@@ -1,0 +1,377 @@
+.markting-seo{
+  .carousel-item{
+  background-image:url('../images/seo1-mob.jpg');
+  &:nth-child(2){
+    background-image:url('../images/seo2-mob.jpg');
+  }
+  background-size: cover;
+  min-height: 550px;
+}
+
+}
+#slider4{
+  .carousel-item{
+  background-image:url('../images/slide4img1.jpg');
+  &:nth-child(2){
+    background-image:url('../images/slide4img2.jpg');
+  }
+  background-size: cover;
+  min-height: 450px;
+  background-position: center center;
+}
+}
+.appo-landing{
+  min-height: 300px;
+  background-size: cover;
+    background-image:url('../images/banner-bg-appo.jpg');
+}
+.web-agency{
+  .carousel-item{
+  //background-image:url('../images/web-agen-banner1-mob.jpg');
+  // &:nth-child(2){
+  //   background-image:url('../images/web-agen-banner2-mob.jpg');
+  // }
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 500px;
+}
+}
+.carousel-indicators{
+  button{
+    background-color: #5c5c5c!important;
+  }
+}
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+    .carousel-caption {
+        top: 50%;
+        right: auto;
+        left: 50%;
+        bottom: auto;
+        transform: translate(-50%, -50%);
+    }
+  .appo-landing{
+      background-image:url('../images/banner-bg-appo-tab.jpg');
+  }
+    .real-estate{
+        .carousel-item{
+        background-image:url('../images/real-banner-tab.jpg');
+        &:nth-child(2){
+          background-image:url('../images/real-banner2-tab.jpg');
+        }
+     }
+}
+
+  #charitycarousel{
+    &.madical-carousel{
+      .carousel-item{
+        background-image:url('../images/madical-banner1-tab.jpg');
+        &:nth-child(2){
+          background-image:url('../images/medical-banner2-tab.jpg');
+        }
+     }
+    }
+
+  }
+  #slider4{
+    .carousel-item{
+    background-image:url('../images/restro1-tab.jpg');
+    &:nth-child(2){
+      background-image:url('../images/restro2-tab.jpg');
+    }
+  }
+  }
+  .software-banner{
+    background-image: url('../images/software-banner-tab.jpg')
+  }
+
+  .restro-banner{
+    .carousel-item{
+    background-image:url('../images/restro1-tab.jpg');
+    &:nth-child(2){
+      background-image:url('../images/restro2-tab.jpg');
+    }
+  }
+  }
+  .business-div {
+    background-image: url('../images/bus-banner-bg-tab.jpg');
+  }
+.markting-seo{
+  .carousel-item{
+  background-image:url('../images/seo1-tab.jpg');
+  &:nth-child(2){
+    background-image:url('../images/seo2-tab.jpg');
+  }
+}
+}
+.web-agency{
+  .carousel-item{
+  //background-image:url('../images/web-agen-banner1-tab.jpg');
+  // &:nth-child(2){
+  //   background-image:url('../images/web-agen-banner2-tab.jpg');
+  // }
+}
+}
+.industry-caro{
+
+    .carousel-item{
+    background-image:url('../images/industries-banner1-tab.jpg');
+    &:nth-child(2){
+      background-image:url('../images/industries-banner2-tab.jpg');
+    }
+    min-height: 500px;
+  }
+
+}
+.crpto-banner{
+  background-image: url('../images/banner-crp-tab.jpg');
+}
+
+.app-landing{
+
+  background-image:url('../images/bannerbg-tab.jpg');
+}
+.medical-landing{
+
+  background-image:url('../images/banner-bg-tab.jpg');
+
+}
+
+.slider2{
+  .carousel-item{
+    background-image:url('../images/industria1-tab.jpg');
+    &:nth-child(2){
+      background-image:url('../images/industria2.jpg');
+    }
+      min-height: 500px;
+  }
+}
+.slider-3{
+  .carousel-item{
+    background-image:url('../images/slide4img1-tab.jpg');
+    &:nth-child(2){
+      background-image:url('../images/slide4img2-tab.jpg');
+    }
+      min-height: 500px;
+  }
+}
+.slider-4{
+  .carousel-item{
+    background-size: cover;
+    background-image:url('../images/sldier4-tab.jpg');
+    // &:nth-child(2){
+    //   background-image:url('../images/slide2-tab.jpg');
+    // }
+      min-height: 500px;
+  }
+}
+.slider6{
+  .carousel-item{
+    background-size: cover;
+    background-image:url('../images/fit-bg-2-tab.jpg');
+    &:nth-child(2){
+      background-image:url('../images/fit-bg-1-tab.jpg');
+    }
+      min-height: 550px;
+  }
+}
+.slider-8{
+
+    .carousel-item{
+      background-size: cover;
+      //background-image:url('../images/slide8-1-tab.jpg');
+      &:nth-child(2){
+        background-image:url('../images/slider88-tab.jpg');
+      }
+        min-height: 500px;
+    }
+}
+#slider-sec{
+  .bg-slider{
+    background-image:url('../images/slider10-tab.jpg') ;
+    background-position: center center;
+    background-size: cover;
+    min-height: 300px;
+  }
+  .bg-slider2{
+    background-image:url('../images/medical-banner2-tab.jpg') ;
+    background-position: center center;
+    background-size: cover;
+      min-height: 300px;
+  }
+}
+.slider-10{
+  .carousel-item{
+    background-size: cover;
+    background-image:url('../images/slider10-tab.jpg');
+    &:nth-child(2){
+      background-image:url('../images/slider10-tab.jpg');
+    }
+      min-height: 500px;
+  }
+}
+}
+@media only screen and (min-width: 993px) {
+
+.carousel-caption{
+  top: 50%;
+  right: auto;
+    left: 50%;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+
+}
+  .web-agency{
+    .carousel-item{
+    //background-image:url('../images/web-agen-banner1.jpg');
+    // &:nth-child(2){
+    //   background-image:url('../images/web-agen-banner2.jpg');
+    // }
+    min-height: 500px;
+  }
+
+  }
+  .slider-10{
+    .carousel-item{
+      background-size: cover;
+      background-image:url('../images/slider10.jpg');
+      &:nth-child(2){
+        background-image:url('../images/slider10.jpg');
+      }
+        min-height: 500px;
+    }
+  }
+  #slider-sec{
+    .bg-slider{
+      background-image:url('../images/slider10.jpg') ;
+      min-height: 500px;
+    }
+    .bg-slider2{
+      background-image:url('../images/medical-banner2.jpg') ;
+        min-height: 500px;
+    }
+  }
+  .slider-8{
+
+      .carousel-item{
+        background-size: cover;
+        //background-image:url('../images/slide8-1.jpg');
+        &:nth-child(2){
+          background-image:url('../images/slider88.jpg');
+        }
+          min-height: 500px;
+      }
+  }
+  .slider6{
+    .carousel-item{
+      background-size: cover;
+      background-image:url('../images/fit-bg-2.jpg');
+      &:nth-child(2){
+        background-image:url('../images/fit-bg-1.jpg');
+      }
+        min-height: 500px;
+    }
+  }
+  .slider-4{
+    .carousel-item{
+      background-size: cover;
+      background-image:url('../images/sldier4.jpg');
+      // &:nth-child(2){
+      //   background-image:url('../images/slide2.jpg');
+      // }
+        min-height: 500px;
+    }
+  }
+  .slider-3{
+    .carousel-item{
+      background-image:url('../images/slide4img1.jpg');
+      &:nth-child(2){
+        background-image:url('../images/slide4img2.jpg');
+      }
+        min-height: 500px;
+    }
+  }
+  .slider2{
+    .carousel-item{
+      background-image:url('../images/industria1.jpg');
+      &:nth-child(2){
+        background-image:url('../images/industria2.jpg');
+      }
+        min-height: 500px;
+    }
+  }
+  .appo-landing{
+      background-image:url('../images/banner-bg-appo.jpg');
+  }
+  .medical-landing{
+
+    background-image:url('../images/banner-bg.jpg');
+
+  }
+  .app-landing{
+
+    background-image:url('../images/bannerbg.jpg');
+  }
+
+  .crpto-banner{
+    background-image: url('../images/banner-crp.jpg');
+  }
+  .industry-caro{
+
+      .carousel-item{
+      background-image:url('../images/industries-banner1.jpg');
+      &:nth-child(2){
+        background-image:url('../images/industries-banner2.jpg');
+      }
+      min-height: 500px;
+    }
+
+  }
+  .markting-seo{
+    .carousel-item{
+    background-image:url('../images/seo1.jpg');
+    &:nth-child(2){
+      background-image:url('../images/seo2.jpg');
+    }
+min-height: 500px;
+  }
+
+  }
+  .business-div {
+    background-image: url('../images/bus-banner-bg.jpg');
+  }
+
+
+
+  #charitycarousel{
+    &.madical-carousel{
+      .carousel-item{
+        background-image:url('../images/madical-banner1.jpg');
+        &:nth-child(2){
+          background-image:url('../images/medical-banner2.jpg');
+        }
+        min-height: 500px;
+      }
+    }
+  }
+  .software-banner{
+    background-image: url('../images/software-banner.jpg')
+  }
+  .real-estate{
+    .carousel-item{
+    background-image:url('../images/real-banner.jpg');
+    &:nth-child(2){
+      background-image:url('../images/real-banner2.jpg');
+    }
+    min-height: 500px;
+ }
+}
+.restro-banner{
+  .carousel-item{
+  background-image:url('../images/restro1.jpg');
+  &:nth-child(2){
+    background-image:url('../images/restro2.jpg');
+  }
+  min-height: 500px;
+}
+}
+}

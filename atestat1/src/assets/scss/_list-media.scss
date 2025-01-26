@@ -1,0 +1,48 @@
+.media {
+    border: 1px solid rgba(120, 130, 140, 0.13) !important;
+    margin-bottom: 10px !important;
+    padding: 15px !important;
+}
+
+.list-group-item-action {
+
+    &.active {
+        color: $white;
+        background: linear-gradient(to right, #1051c2 0%, #6a11cb 70%) !important;
+
+        h5 {
+            color: $white!important;
+        }
+
+        p {
+            color: $white;
+        }
+    }
+
+    &:hover {
+        z-index: 1;
+        color: $text-dblue;
+        text-decoration: none;
+        background: linear-gradient(to right, #ffffff 0%, #ffffff 70%) !important;
+
+        h5 {
+            color: $text-dblue!important;
+        }
+
+        p {
+            color: $text-dblue;
+        }
+    }
+}
+
+.lm {
+    .active {
+        background: linear-gradient(to right, #1051c2 0%, #6a11cb 70%) !important;
+    }
+}
+
+@media (max-width: 550px){
+    .mar1{
+        margin-top:30px;
+    }
+}

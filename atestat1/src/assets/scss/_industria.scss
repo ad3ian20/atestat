@@ -1,0 +1,99 @@
+.industry-caro {
+  .carousel-item {
+    background-image: url("../images/industries-banner1-mob.jpg");
+    &:nth-child(2) {
+      background-image: url("../images/industries-banner2-mob.jpg");
+    }
+    background-size: cover;
+    min-height: 400px;
+  }
+}
+
+.industria-card {
+  .card {
+    .img-bx {
+      overflow: hidden;
+    }
+    img {
+      width: 100%;
+      &:hover {
+        transform: scale(1.1);
+        transition: 0.1s ease-in;
+      }
+    }
+  }
+}
+.industry-tab {
+  #experienceTab.nav-pills .nav-link.active {
+    color: #6a11cb;
+    background-color: transparent;
+    border-radius: 0px;
+    border-left: 3px solid #6a11cb;
+  }
+
+  #experienceTab.nav-pills .nav-link {
+    border-radius: 0px;
+    border-left: 3px solid lightgray;
+    padding: 20px 10px;
+  }
+
+  .date-range {
+    letter-spacing: 0.01em;
+  }
+  a {
+    transition: 0.3s eas-in-out;
+  }
+
+  a:hover {
+    color: $red;
+  }
+
+  .nav-link {
+    img {
+      border-radius: 50%;
+      height: 60px;
+      width: 60px;
+    }
+  }
+
+  .tab-pane {
+    p {
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .industry-tab {
+    .nav-link {
+      padding: 10px !important;
+      img {
+        height: 70px;
+        width: 70px;
+      }
+    }
+    .flex-column {
+      flex-direction: row !important;
+      justify-content: space-around;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+  }
+  .industry-tab #experienceTab.nav-pills .nav-link {
+    border-left: 0;
+    border-bottom: 0;
+  }
+  .industry-tab #experienceTab.nav-pills .nav-link.active {
+    border-left: 0;
+    border-bottom: 3px solid #b50717;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .industry-tab {
+    .nav-link {
+      img {
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
+}

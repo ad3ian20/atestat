@@ -1,0 +1,177 @@
+.slider-10{
+  .slide-content {
+    padding: 40px;
+    position: relative;
+    max-width: 360px;
+}
+.tag {
+    color: #ffffff;
+    font-size: 13px;
+    padding: 5px 7px;
+    vertical-align: middle;
+    position: relative;
+    font-weight: 300;
+    top: -2px;
+}
+label {
+    line-height: 20px;
+    position: absolute;
+    top: -12px;
+    font-size: 12px;
+    font-family: 'Poppins';
+    font-style: inherit;
+    padding: 3px 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+}
+.slider1{
+  .carousel-caption{
+    bottom: auto;
+  }
+}
+#slider-sec{
+  .bg-slider{
+    background-image:url('../images/slider10-mob.jpg') ;
+    background-position: center center;
+    background-size: cover;
+    min-height: 300px;
+  }
+  .bg-slider2{
+    background-image:url('../images/medical-banner2-mob.jpg') ;
+    background-position: center center;
+    background-size: cover;
+      min-height: 300px;
+  }
+}
+#slider9 {
+  .carousel-indicators{
+    justify-content: start;
+  }
+  .font-12{
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  #slider9 {
+    .carousel-indicators{
+      justify-content: center;
+    }
+  }
+  .slider-control a {
+    display: none;
+  }
+.slide-text {
+  p {
+    margin-bottom:  10px !important;
+  }
+}
+  .slick-slide {
+    .card {
+      // width: 100% ;
+    }
+  }
+  .business-cardslider {
+    .card {
+      width: 90% !important;
+    }
+  }
+  .creative-slider {
+    .slick-dots {
+      text-align: center;
+    }
+  }
+  #slider-sec{
+    .price-tag {
+      label{
+        display: block;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+.slider-control {
+  a {
+    opacity: 1;
+    &.carousel-control-prev {
+      left: -15px;
+    }
+    &.carousel-control-next {
+      right: -15px;
+    }
+    span {
+      background-color: #ffffff;
+    }
+  }
+}
+.slider2{
+  .carousel-item{
+      background-size: cover;
+    background-image:url('../images/industria1-mob.jpg');
+    &:nth-child(2){
+      background-image:url('../images/industria2-mob.jpg');
+    }
+    background-position: center center;
+      min-height: 350px;
+  }
+}
+.slider-3{
+  .carousel-item{
+    background-size: cover;
+    background-image:url('../images/slide4img1-mob.jpg');
+    &:nth-child(2){
+      background-image:url('../images/slide4img2-mob.jpg');
+    }
+    background-position: center center;
+      min-height: 480px;
+  }
+}
+.slider-4{
+  .carousel-item{
+    background-size: cover;
+    background-image:url('../images/sldier4-mob.jpg');
+    // &:nth-child(2){
+    //   background-image:url('../images/slide2-mob.jpg');
+    // }
+    background-position: center center;
+      min-height: 350px;
+  }
+}
+.slider6{
+  .carousel-item{
+    background-size: cover;
+    background-image:url('../images/fit-bg-2-mob.jpg');
+    &:nth-child(2){
+      background-image:url('../images/fit-bg-1-mob.jpg');
+    }
+    background-position: center center;
+      min-height: 350px;
+  }
+}
+
+.slider-8{
+
+    .carousel-item{
+      background-size: cover;
+      // background-image:url('../images/slide8-1-mob.jpg');
+      &:nth-child(2){
+        background-image:url('../images/slider88-mob.jpg');
+      }
+      background-position: center center;
+        min-height: 350px;
+    }
+}
+.slider-10{
+  .carousel-item{
+    background-size: cover;
+    background-image:url('../images/slider10-mob.jpg');
+    &:nth-child(2){
+      background-image:url('../images/slider10-mob.jpg');
+    }
+    background-position: center center;
+      min-height: 350px;
+  }
+  
+}

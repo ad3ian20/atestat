@@ -1,0 +1,261 @@
+.app-landing {
+  background-size: cover;
+  background-image: url("../images/bannerbg-mob.jpg");
+  min-height: 400px;
+}
+#banner1 {
+  padding-top: 70px;
+  padding-bottom: 200px;
+  background-size: cover;
+  background-position: center center;
+
+  h2 {
+    font-size: $font-size-48;
+    line-height: 55px;
+    letter-spacing: -1px;
+  }
+
+  input {
+    line-height: 62px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  input[type="text"] {
+    color: $text-light;
+    border-radius: 36px 0 0 36px;
+    text-indent: 35px;
+    padding-right: 15px;
+    width: 60%;
+    font-weight: 300;
+    box-shadow: -5px 0 30px 0 rgba(0, 0, 0, 0.05);
+    text-overflow: ellipsis;
+  }
+
+  input[type="submit"] {
+    border-radius: 0 36px 36px 0;
+    width: auto;
+    padding: 0 25px;
+    cursor: pointer;
+    margin-left: -4px;
+    box-shadow: 5px 0 30px 0 rgb(0 0 0 / 5%);
+    transition: all 0.5s ease-in-out;
+    background-color: $red;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.card {
+  border: 0px;
+
+  &.card-shad {
+    box-shadow: 0px 0px 30px rgb(115 128 157 / 16%) !important;
+  }
+}
+
+.wrap-feature11-box {
+  margin-top: -110px;
+
+  .card {
+    border: 0px;
+
+    &.card-shad {
+      box-shadow: 0px 0px 30px rgb(115 128 157 / 16%) !important;
+    }
+
+    .card-body {
+      padding: 40px;
+
+      .icon-space {
+        margin: -80px 0 20px;
+
+        .icon-round {
+          font-size: $font-size-48;
+          color: $white;
+          width: 80px;
+          line-height: 80px;
+          text-align: center;
+          border-radius: 100%;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+.title {
+  margin: 20px 0;
+}
+
+.txt-color {
+  color: $greyish-brown;
+}
+
+.subtxt-color {
+  color: $greyish-warm;
+}
+
+.wrap-feature41-box {
+  .f41-tab {
+    display: block;
+
+    li a {
+      display: flex;
+      margin-bottom: $gap-desktop-20;
+      padding: 25px;
+
+      .t-icon {
+        margin-right: 25px;
+        color: #8d97ad;
+      }
+
+      .mdi {
+        color: #00004d;
+      }
+
+      h5 {
+        color: #00004d !important;
+        font-weight: 500;
+      }
+
+      p {
+        color: #00004d !important;
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+
+      h6 {
+        font-size: 14px;
+        margin-bottom: 0px;
+      }
+
+      &:hover {
+        background: $white;
+        color: $red;
+        box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+      }
+
+      &.active {
+        background: $white;
+        color: #00004d;
+        box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+
+        .mdi {
+          color: #6a11cb;
+        }
+
+        h5 {
+          color: #6a11cb !important;
+        }
+
+        p {
+          color: #00004d !important;
+          font-weight: 400;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.wrap-feature2-box {
+  .card {
+    border: 0px;
+  }
+
+  .card-shadow {
+    box-shadow: 0px 0px 30px rgb(115 128 157 / 10%);
+  }
+}
+
+.feature8 {
+  .text-info {
+    color: $red !important;
+  }
+
+  .list-block {
+    li {
+      font-weight: 400;
+      color: #00004d;
+      list-style: none;
+      padding: 10px 0;
+    }
+  }
+}
+
+.pricing5 {
+  .pricing-box {
+    margin-top: 120px;
+
+    .middle-box {
+      margin-top: -75px;
+
+      .general-listing {
+        margin-top: 60px;
+      }
+    }
+  }
+
+  .card {
+    border: 0px;
+    background-size: 100% !important;
+  }
+
+  .card-shadow {
+    box-shadow: 0px 0px 30px rgb(115 128 157 / 10%);
+  }
+
+  .general-listing {
+    margin: 90px 0 60px 0;
+
+    &.only-li {
+      li {
+        padding: 20px 0;
+        display: block;
+      }
+    }
+  }
+}
+
+.feature48 {
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  .wrap-feature48-box {
+    padding: 10% 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrap-feature11-box {
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  .middle-box {
+    margin-top: -50px;
+  }
+
+  .mar-top {
+    margin-top: 0px !important;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  #banner1 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-size: cover;
+    input[type="submit"] {
+      padding: 0 8px;
+    }
+  }
+}

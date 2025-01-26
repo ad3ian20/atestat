@@ -1,0 +1,145 @@
+.custom-modal {
+    .close-btn {
+        position: absolute;
+        right: 12px;
+        top: 10px;
+        color: #8d97ad;
+        font-size: 25px;
+        background: #ffffff;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        display: block;
+        border-radius: 100%;
+        line-height: 19px;
+    }
+
+    .modal-body {
+        overflow: hidden;
+    }
+
+    .modal-bg-img {
+        background-size: cover;
+        background-position: center center;
+        min-height: 350px;
+    }
+}
+
+.modal1 {
+    .modal-bg {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center top;
+        padding: 20px;
+    }
+
+    .input-group {
+        margin-top: -45px;
+    }
+}
+
+.modal2 {
+    .modal-bg {
+        padding: 30px 15px 30px 15px;
+    }
+}
+
+.modal3 {
+    .modal-bg {
+        padding: 50px 40px 60px 25px;
+    }
+}
+
+.modal4 {
+    .modal-bg {
+        padding: 55px 55px 55px 40px;
+    }
+}
+
+#mymodal6 {
+    .modal-dialog {
+        min-height: calc(100vh - 60px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: auto;
+    }
+}
+
+#mymodal {
+    .modal-dialog {
+        min-height: calc(100vh - 60px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: auto;
+    }
+}
+
+#mymodal2 {
+    .modal-dialog {
+        min-height: calc(100vh - 60px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: auto;
+    }
+}
+
+#mymodal3 {
+    .modal-dialog {
+        min-height: calc(100vh - 60px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: auto;
+    }
+}
+
+#mymodal4 {
+    .modal-dialog {
+        min-height: calc(100vh - 60px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: auto;
+    }
+}
+
+#mymodal5 {
+    .modal-dialog {
+        min-height: calc(100vh - 60px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: auto;
+    }
+}
+
+.ui-videos {
+    .card-shadow {
+        padding-top: 0;
+    }
+}
+
+@media (max-width:576px) {
+    .modal4 {
+        .d-flex.no-block {
+            display: block !important;
+        }
+    }
+
+    .modal5 {
+        .modal-bg.p-40 {
+            padding: 20px;
+        }
+    }
+
+    .ui-videos {
+        .card-shadow {
+            padding-top: 15px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}

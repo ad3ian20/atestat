@@ -1,0 +1,115 @@
+.restro-banner {
+  .carousel-item {
+    background-size: cover;
+    background-image: url("../images/restro1-mob.jpg");
+    &:nth-child(2) {
+      background-image: url("../images/restro2-mob.jpg");
+    }
+    background-size: cover;
+    min-height: 350px;
+  }
+}
+
+#resta-carousel {
+  .promo-card {
+    background-image: url(../images/resta-card.jpg);
+    background-size: cover;
+  }
+  img {
+    width: 100%;
+  }
+
+  .carousel-item {
+    position: relative;
+  }
+}
+.resta-card {
+  .img-bx {
+    margin: 0 auto;
+  }
+}
+
+.resta-imgtext {
+  margin-top: $gap-desktop-40;
+  .od2 {
+    text-align: end;
+  }
+  .img-bx {
+    min-height: 300px;
+    background-image: url(../images/resta-card.jpg);
+    background-size: cover;
+    &.img-bx2 {
+      background-image: url(../images/resta-card1.jpg);
+    }
+  }
+  .text-bx {
+    .text {
+      color: $red;
+    }
+  }
+}
+.resta-stores {
+  margin-top: $gap-desktop-40;
+  padding: $gap-desktop-40 0;
+  background: $red;
+  h2 {
+    color: $white;
+  }
+  span {
+    color: $white;
+  }
+}
+.resta-slider {
+  padding: $gap-desktop-40 0;
+  margin-top: $gap-desktop-40;
+  .card {
+    border: none;
+  }
+  .img-bx {
+    height: 80px;
+    width: 80px;
+    img {
+      border-radius: 50%;
+      width: 100%;
+      background-size: cover;
+    }
+  }
+  .slick-dots {
+    left: -140%;
+    top: 70%;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  #resta-carousel {
+    p {
+      font-size: 12px;
+      margin: 10px 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  #resta-carousel {
+    img {
+      height: 400px;
+      max-width: initial;
+      width: auto;
+    }
+    h1 {
+      color: $white;
+    }
+    p {
+      color: $white;
+      font-size: 12px;
+    }
+  }
+  .resta-imgtext {
+    .od2 {
+      order: 2;
+      text-align: start;
+    }
+    .od1 {
+      order: 1;
+    }
+  }
+}

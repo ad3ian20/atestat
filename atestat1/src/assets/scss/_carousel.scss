@@ -1,0 +1,42 @@
+.img-responsive {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.token {
+    &.tag {
+        color: #905;
+    }
+
+    &.attr-name {
+        color: #690;
+    }
+
+    &.attr-value {
+        color: #07a;
+    }
+}
+pre[class*="language-"] {
+    background: #FFF;
+    border: 1px solid #F0F0F0;
+    border-left: 2px solid $red;
+    border-radius: 4px;
+}
+
+.side-btn {
+    font-size: 32px;
+    color: #00004d;
+}
